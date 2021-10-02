@@ -3,12 +3,12 @@ import styled from "styled-components";
 export const StyledHeaderNav = styled.section`
 
 	display: flex;
-	margin-left: 50px;
+	margin-left: 40px;
 
 	.nav-item {
 		border-right: 1px solid #fff;
-		padding-left: 5px;
-		padding-right: 5px;
+		padding-left: 10px;
+		padding-right: 10px;
 	}
 
 	.nav-item:last-child {

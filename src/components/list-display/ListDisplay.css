@@ -7,21 +7,6 @@
 	padding: 5px;
 }
 
-.list-display .item .item-info {
+.list-display .item ArticleInfoTile {
 	border-bottom: 2px solid #eee;
-}
-
-.list-display .item-info .upper-row,
-.list-display .item-info .bottom-row {
-	display: flex
-}
-
-.list-display .item-info .upper-row .title {
-	font-size: 14px;
-	color: #333;
-}
-
-.list-display .item-info .upper-row .domain {
-	color: #999;
-	margin-left: 5px;
 }

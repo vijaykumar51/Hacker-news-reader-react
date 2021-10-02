@@ -1,3 +1,4 @@
+import ArticleInfoTile from "../article-info-tile/ArticleInfoTile";
 import "./ListDisplay.css";
 
 function ListDisplay() {
@@ -47,19 +48,7 @@ function ListDisplay() {
 				{itemList.map((article, index) => {
 					return <div className="item" key={article.id}>
 						<div className="item-count">{index + 1}.</div>
-						<div className="item-info">
-							<div className="upper-row">
-								<div className="title">{article.title}</div>
-								<div className="domain">({article.domain})</div>
-							</div>
-							<div className="bottom-row">
-								<div className="points">{article.points} points</div>
-								<div className="user">{` by ABC `}</div>
-								<div className="time-ago">{article.time_ago}</div>
-								<div className="discuss">discuss</div>
-							</div>
-						</div>
-
+						<ArticleInfoTile article={article}></ArticleInfoTile>
 					</div>
 				})}
 
