@@ -1,5 +1,5 @@
 import ArticleInfoTile from "../article-info-tile/ArticleInfoTile";
-import "./ListDisplay.css";
+import { StyledListDisplay } from "./ListDisplay.styled";
 
 function ListDisplay() {
 
@@ -43,7 +43,7 @@ function ListDisplay() {
 	]
 
 	return (
-		<div className="list-display">
+		<StyledListDisplay>
 			<div className="list-items">
 				{itemList.map((article, index) => {
 					return <div className="item" key={article.id}>
@@ -51,12 +51,8 @@ function ListDisplay() {
 						<ArticleInfoTile article={article}></ArticleInfoTile>
 					</div>
 				})}
-
 			</div>
-			<div className="pagination-options">
-				More
-			</div>
-		</div>
+		</StyledListDisplay>
 	)
 }
 
