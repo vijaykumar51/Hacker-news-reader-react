@@ -7,14 +7,18 @@ export const StyledArticleInfoTile = styled.div`
 
 	.upper-row,
 	.bottom-row {
-		display: flex
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	.upper-row {
+		margin-bottom: 4px;
 	}
 
 	.upper-row .title {
 		color: #000;
 		font-size: 16px;
 		font-weight: 500;
-		margin-bottom: 4px;
 	}
 
 	.upper-row .domain {

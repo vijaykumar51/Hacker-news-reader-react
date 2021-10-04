@@ -7,11 +7,18 @@ export const StyledHeaderNav = styled.section`
 
 	.nav-item {
 		border-right: 1px solid #fff;
-		padding-left: 10px;
+		color: #fff;
+		cursor: pointer;
+		margin-left: 10px;
 		padding-right: 10px;
+		text-decoration: none;
 	}
 
 	.nav-item:last-child {
 		border-right: none;
+	}
+
+	.active-link {
+		text-decoration: underline;
 	}
 `

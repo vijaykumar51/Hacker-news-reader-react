@@ -2,16 +2,19 @@ import { useEffect, useState } from "react";
 import ArticleInfoTile from "../article-info-tile/ArticleInfoTile";
 import { StyledListDisplay } from "./ListDisplay.styled";
 import getItems from "../../services/http/ItemsService";
+import { useParams } from "react-router-dom";
 
-function ListDisplay() {
-
+const ListDisplay = ({ listType }) => {
+	const { pageNumber } = useParams();
 	const [itemList, setItemList] = useState([]);
 
 	useEffect(() => {
-		getItems("news", 1).then(data => setItemList(data));
-	}, []);
+		getItems(listType, pageNumber).then(data => setItemList(data));
+		console.log(listType, pageNumber);
+	}, [])
 
 	return (
+
 		<StyledListDisplay>
 			<div className="list-items">
 				{itemList.map((article, index) => {
