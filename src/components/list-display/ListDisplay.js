@@ -10,11 +10,9 @@ const ListDisplay = ({ listType }) => {
 
 	useEffect(() => {
 		getItems(listType, pageNumber).then(data => setItemList(data));
-		console.log(listType, pageNumber);
-	}, [])
+	}, [listType, pageNumber])
 
 	return (
-
 		<StyledListDisplay>
 			<div className="list-items">
 				{itemList.map((article, index) => {
