@@ -3,6 +3,7 @@ import { StyledArticleInfoTile } from "../article-info-tile/ArtileIntoTile.style
 
 export const StyledListDisplay = styled.div`
 	background-color: #f5f5f5;
+	min-height: 100vh;
 
 	.item-count {
 		position: relative;
