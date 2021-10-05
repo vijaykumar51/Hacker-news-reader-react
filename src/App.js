@@ -3,7 +3,7 @@ import Header from './components/header/Header';
 import ListDisplay from './components/list-display/ListDisplay';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import { ListType } from './constants/List-Type';
-import Footer from './components/Footer/Footer';
+import Footer from './components/footer/Footer';
 
 function PageNotFound() {
 	return <div>404 Page Not Found</div>

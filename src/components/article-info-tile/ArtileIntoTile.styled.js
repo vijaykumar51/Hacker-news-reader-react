@@ -21,6 +21,10 @@ export const StyledArticleInfoTile = styled.div`
 		font-weight: 500;
 	}
 
+	.upper-row .article-link {
+		text-decoration: none;
+	}
+
 	.upper-row .domain {
 		color: #999;
 		margin-left: 5px;
@@ -35,6 +39,8 @@ export const StyledArticleInfoTile = styled.div`
 	.link {
 		cursor: pointer;
 		color: #b92b27;
+		margin-left: 3px;
+		text-decoration: none;
 	}
 
 	.link:hover {
