@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
-import ArticleInfoTile from "../article-info-tile/ArticleInfoTile";
-import { StyledListDisplay } from "./ListDisplay.styled";
-import getItems from "../../services/http/ItemsService";
 import { useParams } from "react-router-dom";
+import ArticleInfoTile from "../../components/article-info-tile/ArticleInfoTile";
+import getItems from "../../services/http/ItemsService";
+import { StyledListDisplay } from "./ListDisplay.styled";
 
 const ListDisplay = ({ listType }) => {
 	const { pageNumber } = useParams();

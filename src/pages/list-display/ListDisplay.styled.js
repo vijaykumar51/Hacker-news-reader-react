@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { StyledArticleInfoTile } from "../article-info-tile/ArtileIntoTile.styled";
+import { StyledArticleInfoTile } from "../../components/article-info-tile/ArtileIntoTile.styled";
 
 export const StyledListDisplay = styled.div`
 	background-color: #f5f5f5;

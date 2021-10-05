@@ -1,9 +1,9 @@
-import './App.css';
-import Header from './components/header/Header';
-import ListDisplay from './components/list-display/ListDisplay';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import { ListType } from './constants/List-Type';
-import Footer from './components/footer/Footer';
+import { BrowserRouter, Route, Switch } from "react-router-dom";
+import Header from "./components/header/Header";
+import ListDisplay from "./pages/list-display/ListDisplay";
+import Footer from "./components/footer/Footer";
+import { ListType } from "./constants/List-Type";
+import "./App.css";
 
 function PageNotFound() {
 	return <div>404 Page Not Found</div>

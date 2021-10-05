@@ -13,8 +13,10 @@ export const StyledLogo = styled.section`
 	}
 
 	img {
+		cursor: pointer;
 		height: 60px;
 		position: relative;
 		z-index: 1;
 	}
+
 `
