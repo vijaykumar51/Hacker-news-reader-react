@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import ArticleInfoTile from "../../components/article-info-tile/ArticleInfoTile";
-import getItems from "../../services/http/ItemsService";
+import { getItems } from "../../services/http/ItemsService";
 import { StyledListDisplay } from "./ListDisplay.styled";
 
 const ListDisplay = ({ listType }) => {

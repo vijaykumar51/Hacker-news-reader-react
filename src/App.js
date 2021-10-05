@@ -4,6 +4,7 @@ import ListDisplay from "./pages/list-display/ListDisplay";
 import Footer from "./components/footer/Footer";
 import { ListType } from "./constants/List-Type";
 import "./App.css";
+import Article from "./pages/article/Article";
 
 function PageNotFound() {
 	return <div>404 Page Not Found</div>
@@ -23,6 +24,7 @@ export default function App() {
 					<Route path="/show/:pageNumber" render={(props) => <ListDisplay {...props} listType={ListType.SHOW} />} />
 					<Route path="/ask/:pageNumber" render={(props) => <ListDisplay {...props} listType={ListType.ASK} />} />
 					<Route path="/jobs/:pageNumber" render={(props) => <ListDisplay {...props} listType={ListType.JOBS} />} />
+					<Route path="/article/:articleId" component={Article} />
 					<Route component={PageNotFound} />
 				</Switch>
 				<Footer />
