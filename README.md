@@ -2,6 +2,8 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/ad01954b7e7644719217bfec030dab31)](https://www.codacy.com/gh/vijaykumar51/Hacker-news-reader-react/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=vijaykumar51/Hacker-news-reader-react&amp;utm_campaign=Badge_Grade)
+
 ## Available Scripts
 
 In the project directory, you can run:
