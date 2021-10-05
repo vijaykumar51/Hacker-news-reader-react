@@ -7,6 +7,7 @@ export default function Comment({ commentInfo }) {
 
 	return (
 		<StyledComment>
+			{/* TODO: fina a cleaner way to implement this */}
 			<div className="comment-author-info">
 				<span onClick={() => setCommentExpanded(prev => !prev)}>
 					[{commentExpanded ? "-" : "+"}]
@@ -18,7 +19,7 @@ export default function Comment({ commentInfo }) {
 				<div className="comment-content" dangerouslySetInnerHTML={{ __html: commentInfo.content }}></div>
 				<div className="child-comments">
 					{
-						commentInfo.comments.map(comment => {
+						commentInfo.comments?.map(comment => {
 							return <Comment key={comment.id} commentInfo={comment}></Comment>
 						})
 					}

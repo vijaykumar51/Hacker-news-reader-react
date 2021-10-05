@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import ArticleInfoTile from "../../components/article-info-tile/ArticleInfoTile";
+import Loading from "../../components/loading/Loading";
 import Paginator from "../../components/paginator/Paginator";
 import { getItems } from "../../services/http/ItemsService";
 import { StyledListDisplay } from "./ListDisplay.styled";
@@ -18,6 +19,10 @@ const ListDisplay = ({ listType }) => {
 	useEffect(() => {
 		getItems(listType, currentPage).then(data => setItemList(data));
 	}, [listType, currentPage])
+
+	if (!itemList.length) {
+		return <Loading />
+	}
 
 	//TODO: check if there is a better way to write this component
 	return (
