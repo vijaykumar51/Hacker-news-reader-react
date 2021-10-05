@@ -14,4 +14,8 @@ export const StyledArticle = styled.div`
 		margin-top: 20px;
 		text-align: left;
 	}
+
+	.comments {
+		margin-top: 50px;
+	}
 `
