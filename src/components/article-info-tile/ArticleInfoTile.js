@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { StyledArticleInfoTile } from "./ArtileIntoTile.styled";
 
 export default function ArticleInfoTile({ article }) {
+	const comments = article.comments_count;
 	return (
 		<StyledArticleInfoTile>
 			<div className="upper-row">
@@ -12,7 +13,11 @@ export default function ArticleInfoTile({ article }) {
 					<Link className="link" to={`/user/${article.user}`}>{article.user}</Link>
 				</div>
 				<div className="time-ago">{article.time_ago} |
-					<Link className="link" to={`/item/${article.id}`}>discuss</Link>
+					<Link className="link" to={`/article/${article.id}`}>
+						{comments === 0 ? "discuss" :
+							comments === 1 ? `${comments} comment`
+								: `${comments} comments`}
+					</Link>
 				</div>
 			</div>
 		</StyledArticleInfoTile>
@@ -28,7 +33,7 @@ export default function ArticleInfoTile({ article }) {
 				<div className="domain">({article.domain})</div>
 			</>
 		} else {
-			return <Link className="article-link" rel="noreferrer" to={`/item/${article.id}`}>
+			return <Link className="article-link" rel="noreferrer" to={`/article/${article.id}`}>
 				<div className="title">{article.title}</div>
 			</Link>
 		}

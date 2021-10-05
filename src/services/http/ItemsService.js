@@ -6,7 +6,7 @@ function getItems(itemType, pageNumber) {
 		pageNumber = 1;
 	}
 
-	const fullUrl = `${UrlConfig.apiBaseUrl}/${itemType}?pageNumber=${pageNumber}`;
+	const fullUrl = `${UrlConfig.apiBaseUrl}/${itemType}?page=${pageNumber}`;
 	return fetch(fullUrl)
 		.then(response => response.json())
 		.catch(err => console.error("Error while fetching items list", err));
