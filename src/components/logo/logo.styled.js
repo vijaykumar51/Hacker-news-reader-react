@@ -13,6 +13,7 @@ export const StyledLogo = styled.section`
 	}
 
 	img {
+		width: 60px;
 		cursor: pointer;
 		height: 60px;
 		position: relative;

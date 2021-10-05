@@ -3,6 +3,23 @@ import { StyledArticleInfoTile } from "./ArtileIntoTile.styled";
 
 export default function ArticleInfoTile({ article }) {
 	const comments = article.comments_count;
+
+	// TODO: check if it makes sense to make these as 2 components - InternalLink vs ExternalLink
+	function getArticleTitle() {
+		if (article.domain) {
+			return <>
+				<a className="article-link" target="_blank" rel="noreferrer" href={article.url}>
+					<div className="title">{article.title}</div>
+				</a>
+				<div className="domain">({article.domain})</div>
+			</>
+		} else {
+			return <Link className="article-link" rel="noreferrer" to={`/article/${article.id}`}>
+				<div className="title">{article.title}</div>
+			</Link>
+		}
+	}
+
 	return (
 		<StyledArticleInfoTile>
 			<div className="upper-row">
@@ -23,19 +40,4 @@ export default function ArticleInfoTile({ article }) {
 		</StyledArticleInfoTile>
 	)
 
-	// TODO: check if it makes sense to make these as 2 components - InternalLink vs ExternalLink
-	function getArticleTitle() {
-		if (article.domain) {
-			return <>
-				<a className="article-link" target="_blank" rel="noreferrer" href={article.url}>
-					<div className="title">{article.title}</div>
-				</a>
-				<div className="domain">({article.domain})</div>
-			</>
-		} else {
-			return <Link className="article-link" rel="noreferrer" to={`/article/${article.id}`}>
-				<div className="title">{article.title}</div>
-			</Link>
-		}
-	}
 }

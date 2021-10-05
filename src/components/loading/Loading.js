@@ -3,7 +3,7 @@ import { StyledLoading } from "./Loading.styled";
 export default function Loading() {
 	return (
 		<StyledLoading>
-			Loading
+			<img src="/loader.gif" alt="loader" />
 		</StyledLoading>
 	)
 }
